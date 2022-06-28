@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:fillViewport="true"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".auth.RecoverAccountFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+
+        <com.google.android.material.appbar.AppBarLayout
+            android:id="@+id/appBarLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <androidx.appcompat.widget.Toolbar
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/color_default">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Recuperar Conta"
+                    android:textColor="@color/white"
+                    android:layout_gravity="center_horizontal"/>
+
+            </androidx.appcompat.widget.Toolbar>
+
+        </com.google.android.material.appbar.AppBarLayout>
+
+        <LinearLayout
+            style="@style/linear_layout_designer"
+
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/appBarLayout">
+
+            <TextView
+                android:text="Informe seu e-mail para receber um link de alteração de senha"
+                android:textAlignment="center"
+                style="@style/style_text_view_information_fields" />
+
+            <TextView
+                android:text="E-mail"
+
+                style="@style/style_text_view_information_fields"/>
+
+            <EditText
+                android:id="@+id/recover_email"
+                android:hint="email@email.com"
+
+                style="@style/style_et_email" />
+
+            <Button
+                android:id="@+id/recover_btn_send"
+
+                app:backgroundTint="@null"
+                android:text="Enviar"
+
+                style="@style/style_btn"
+                />
+            <ProgressBar
+                android:id="@+id/progressbar_recover"
+                tools:visibility="visible"
+
+                style="@style/style_progressbar" />
+
+        </LinearLayout>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>
