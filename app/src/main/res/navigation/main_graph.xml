@@ -20,7 +20,7 @@
     </fragment>
     <fragment
         android:id="@+id/loginFragment"
-        android:name="com.gstech.taskcontroller.auth.LoginFragment"
+        android:name="com.gstech.taskcontroller.ui.auth.LoginFragment"
         android:label="fragment_login"
         tools:layout="@layout/fragment_login" >
         <action
@@ -37,7 +37,7 @@
     </fragment>
     <fragment
         android:id="@+id/registerFragment"
-        android:name="com.gstech.taskcontroller.auth.RegisterFragment"
+        android:name="com.gstech.taskcontroller.ui.auth.RegisterFragment"
         android:label="fragment_register"
         tools:layout="@layout/fragment_register" >
         <action
@@ -50,7 +50,7 @@
     </fragment>
     <fragment
         android:id="@+id/recoverAccountFragment"
-        android:name="com.gstech.taskcontroller.auth.RecoverAccountFragment"
+        android:name="com.gstech.taskcontroller.ui.auth.RecoverAccountFragment"
         android:label="fragment_recover_account"
         tools:layout="@layout/fragment_recover_account" />
     <fragment
