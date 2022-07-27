@@ -56,7 +56,6 @@
             <EditText
                 android:id="@+id/recover_email"
                 android:hint="email@email.com"
-
                 style="@style/style_et_email" />
 
             <Button

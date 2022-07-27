@@ -76,7 +76,7 @@ class RegisterFragment : Fragment() {
             .addOnCompleteListener(requireActivity()) { task ->
                 if (task.isSuccessful) {
                     if (task.isSuccessful) {
-                        findNavController().navigate(R.id.action_registerFragment_to_homeFragment)
+                        findNavController().navigate(R.id.action_global_homeFragment)
                     } else {
 
                         binding.pbCreateAccount.isVisible = false

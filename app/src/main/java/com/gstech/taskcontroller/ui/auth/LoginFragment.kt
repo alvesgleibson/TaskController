@@ -18,8 +18,8 @@ class LoginFragment : Fragment() {
 
     private var _binding: FragmentLoginBinding? = null
     private val binding get() = _binding!!
-
     private lateinit var auth: FirebaseAuth
+
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -33,15 +33,9 @@ class LoginFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
         auth = Firebase.auth
         initClicks()
-        checkAutentication()
+
     }
 
-    //verificar se o usuario esta logado na no cache do firebase, se sim ele ira passar direto pela tela home
-    private fun checkAutentication() {
-        if (auth.currentUser != null){
-            findNavController().navigate( R.id.action_loginFragment_to_homeFragment)
-        }
-    }
 
     private fun initClicks() {
         binding.txtCriarConta.setOnClickListener {
@@ -53,7 +47,7 @@ class LoginFragment : Fragment() {
         }
 
         binding.btnLogin.setOnClickListener {
-           validateData()
+            validateData()
         }
     }
 
@@ -70,15 +64,15 @@ class LoginFragment : Fragment() {
 
     private fun loginUserFirebase(email: String, password: String) {
 
-            auth.signInWithEmailAndPassword(email, password)
-                .addOnCompleteListener(requireActivity()) { task ->
-                    if (task.isSuccessful) {
-                        findNavController().navigate(R.id.action_loginFragment_to_homeFragment)
-                    } else {
-                        binding.progressbarLogin.isVisible = false
-                        Toast.makeText(requireContext(), "Erro", Toast.LENGTH_SHORT).show()
-                    }
+        auth.signInWithEmailAndPassword(email, password)
+            .addOnCompleteListener(requireActivity()) { task ->
+                if (task.isSuccessful) {
+                    findNavController().navigate(R.id.action_global_homeFragment)
+                } else {
+                    binding.progressbarLogin.isVisible = false
+                    Toast.makeText(requireContext(), "Erro", Toast.LENGTH_SHORT).show()
                 }
+            }
 
 
     }

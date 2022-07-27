@@ -22,7 +22,6 @@
         <EditText
             android:id="@+id/txtEmail"
             android:hint="email@email.com"
-
             style="@style/style_et_email" />
 
         <TextView
@@ -34,7 +33,6 @@
         <EditText
             android:id="@+id/txtSenha"
             android:hint="*******"
-
             style="@style/style_et_password" />
 
         <Button
