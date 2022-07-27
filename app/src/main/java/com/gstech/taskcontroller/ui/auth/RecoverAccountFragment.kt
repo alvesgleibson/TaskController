@@ -1,4 +1,4 @@
-package com.gstech.taskcontroller.auth
+package com.gstech.taskcontroller.ui.auth
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
@@ -7,11 +7,9 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
 import androidx.core.view.isVisible
-import androidx.navigation.fragment.findNavController
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.ktx.auth
 import com.google.firebase.ktx.Firebase
-import com.gstech.taskcontroller.R
 import com.gstech.taskcontroller.databinding.FragmentRecoverAccountBinding
 
 

@@ -1,4 +1,4 @@
-package com.gstech.taskcontroller.auth
+package com.gstech.taskcontroller.ui.auth
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
