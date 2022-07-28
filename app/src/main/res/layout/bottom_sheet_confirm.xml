@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:background="@drawable/bg_custom_dialog"
+    android:layout_height="match_parent"
+    android:padding="32dp">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="@color/color_default"
+        android:text="Atenção"
+        android:textStyle="bold"
+        android:textSize="20sp"
+        android:gravity="center_horizontal"
+        android:layout_marginTop="10dp"
+        />
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/color_default"
+        android:layout_margin="15dp"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Aperte em conafirmar para deslogar do App"
+        android:textStyle="bold"
+        android:gravity="center_horizontal"
+        />
+
+    <Button
+        android:id="@+id/confirm_logout_s"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="15dp"
+        android:layout_gravity="center_horizontal"
+        android:text="Confirmar"
+        />
+
+</LinearLayout>

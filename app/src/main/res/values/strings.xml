@@ -1,5 +1,25 @@
 <resources>
     <string name="app_name">TaskController</string>
-    <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <!--        Generics-->
+        <string name="text_email">E-mail</string>
+        <string name="text_password">Senha</string>
+        <string name="text_hint">email@email.com</string>
+        <string name="text_create_account">Criar Conta</string>
+
+    <!--    Login Fragment-->
+
+    <string name="text_btn_login_fragment">Entrar</string>
+    <string name="text_recover_password_login_fragment">Recuperar Senha</string>
+
+    <!--    Create Account Fragment-->
+
+    <string name="text_password_repeat_create_account_fragment">Repita sua senha</string>
+
+    <!--    Recover Account Fragment-->
+    <string name="text_title_recover_account_fragment">Recuperar Conta</string>
+    <string name="text_description_recover_account_fragment">Informe seu e-mail para receber um link de alteração de senha</string>
+    <string name="text_btn_recover_account_fragment">Enviar</string>
+
+
 </resources>

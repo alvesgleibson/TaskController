@@ -58,8 +58,8 @@ class LoginFragment : Fragment() {
             if (password.isNotEmpty()) {
                 binding.progressbarLogin.isVisible = true
                 loginUserFirebase(email, password)
-            } else Toast.makeText(requireContext(), "Informe uma senha", Toast.LENGTH_SHORT).show()
-        } else Toast.makeText(requireContext(), "Informe um email", Toast.LENGTH_SHORT).show()
+            } else Toast.makeText(requireContext(), "Informe um E-mail", Toast.LENGTH_SHORT).show()
+        } else Toast.makeText(requireContext(), "Informe uma Senha", Toast.LENGTH_SHORT).show()
     }
 
     private fun loginUserFirebase(email: String, password: String) {

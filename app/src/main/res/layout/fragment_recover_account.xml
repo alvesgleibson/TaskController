@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:fillViewport="true"
@@ -28,7 +29,7 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Recuperar Conta"
+                    android:text="@string/text_title_recover_account_fragment"
                     android:textColor="@color/white"
                     android:layout_gravity="center_horizontal"/>
 
@@ -44,25 +45,25 @@
             app:layout_constraintTop_toBottomOf="@+id/appBarLayout">
 
             <TextView
-                android:text="Informe seu e-mail para receber um link de alteração de senha"
+                android:text="@string/text_description_recover_account_fragment"
                 android:textAlignment="center"
                 style="@style/style_text_view_information_fields" />
 
             <TextView
-                android:text="E-mail"
+                android:text="@string/text_email"
 
                 style="@style/style_text_view_information_fields"/>
 
             <EditText
                 android:id="@+id/recover_email"
-                android:hint="email@email.com"
+                android:hint="@string/text_hint"
                 style="@style/style_et_email" />
 
             <Button
                 android:id="@+id/recover_btn_send"
 
                 app:backgroundTint="@null"
-                android:text="Enviar"
+                android:text="@string/text_btn_recover_account_fragment"
 
                 style="@style/style_btn"
                 />
