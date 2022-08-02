@@ -11,6 +11,7 @@ import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.ktx.auth
 import com.google.firebase.ktx.Firebase
 import com.gstech.taskcontroller.databinding.FragmentRecoverAccountBinding
+import com.gstech.taskcontroller.helper.FirebaseHelper
 
 
 private var _binding: FragmentRecoverAccountBinding? = null
@@ -69,11 +70,10 @@ class RecoverAccountFragment : Fragment() {
                     binding.progressbarRecover.isVisible = false
                     Toast.makeText(
                         requireContext(),
-                        "Algo deu errado, tente novamente mais tarde ",
+                        FirebaseHelper.validError( task.exception?.message?: "" ),
                         Toast.LENGTH_SHORT
                     ).show()
                 }
-                binding.progressbarRecover.isVisible = false
 
 
             }
