@@ -1,6 +1,7 @@
 package com.gstech.taskcontroller.ui.auth
 
 import android.os.Bundle
+import android.util.Log
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
@@ -13,13 +14,12 @@ import com.google.firebase.auth.ktx.auth
 import com.google.firebase.ktx.Firebase
 import com.gstech.taskcontroller.R
 import com.gstech.taskcontroller.databinding.FragmentLoginBinding
+import com.gstech.taskcontroller.helper.FirebaseHelper
 
 class LoginFragment : Fragment() {
 
     private var _binding: FragmentLoginBinding? = null
     private val binding get() = _binding!!
-    private lateinit var auth: FirebaseAuth
-
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -31,7 +31,6 @@ class LoginFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        auth = Firebase.auth
         initClicks()
 
     }
@@ -52,25 +51,38 @@ class LoginFragment : Fragment() {
     }
 
     private fun validateData() {
+
         val email = binding.txtEmail.text.toString().trim()
         val password = binding.txtSenha.text.toString().trim()
+
         if (email.isNotEmpty()) {
             if (password.isNotEmpty()) {
                 binding.progressbarLogin.isVisible = true
                 loginUserFirebase(email, password)
-            } else Toast.makeText(requireContext(), "Informe um E-mail", Toast.LENGTH_SHORT).show()
-        } else Toast.makeText(requireContext(), "Informe uma Senha", Toast.LENGTH_SHORT).show()
+            } else Toast.makeText(requireContext(), "Informe uma Senha", Toast.LENGTH_SHORT).show()
+        } else Toast.makeText(requireContext(), "Informe um E-mail", Toast.LENGTH_SHORT).show()
     }
 
     private fun loginUserFirebase(email: String, password: String) {
 
-        auth.signInWithEmailAndPassword(email, password)
+        FirebaseHelper.getAuth().signInWithEmailAndPassword(email, password)
             .addOnCompleteListener(requireActivity()) { task ->
                 if (task.isSuccessful) {
                     findNavController().navigate(R.id.action_global_homeFragment)
                 } else {
+                    Log.i(
+                        "INFOTESTE",
+                        "loginUserFirebase: ${task.exception?.message}${
+                            FirebaseHelper.validError(task.exception?.message ?: "")
+                        }"
+                    )
                     binding.progressbarLogin.isVisible = false
-                    Toast.makeText(requireContext(), "Erro", Toast.LENGTH_SHORT).show()
+                    Toast.makeText(
+                        requireContext(),
+                        FirebaseHelper.validError(task.exception?.message ?: ""),
+                        Toast.LENGTH_SHORT
+                    ).show()
+
                 }
             }
 
