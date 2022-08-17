@@ -14,7 +14,7 @@ class FirebaseHelper {
         fun isAuthentication() = getAuth().currentUser != null
 
 
-        fun validError(error: String): Int {
+        fun validErrorFirebase(error: String): Int {
             return when {
 
                 error.contains("The email address is badly formatted") -> {

@@ -70,7 +70,7 @@ class RecoverAccountFragment : Fragment() {
                     binding.progressbarRecover.isVisible = false
                     Toast.makeText(
                         requireContext(),
-                        FirebaseHelper.validError( task.exception?.message?: "" ),
+                        FirebaseHelper.validErrorFirebase( task.exception?.message?: "" ),
                         Toast.LENGTH_SHORT
                     ).show()
                 }

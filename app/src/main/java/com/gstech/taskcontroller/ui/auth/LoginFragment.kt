@@ -9,9 +9,6 @@ import android.view.ViewGroup
 import android.widget.Toast
 import androidx.core.view.isVisible
 import androidx.navigation.fragment.findNavController
-import com.google.firebase.auth.FirebaseAuth
-import com.google.firebase.auth.ktx.auth
-import com.google.firebase.ktx.Firebase
 import com.gstech.taskcontroller.R
 import com.gstech.taskcontroller.databinding.FragmentLoginBinding
 import com.gstech.taskcontroller.helper.FirebaseHelper
@@ -73,13 +70,13 @@ class LoginFragment : Fragment() {
                     Log.i(
                         "INFOTESTE",
                         "loginUserFirebase: ${task.exception?.message}${
-                            FirebaseHelper.validError(task.exception?.message ?: "")
+                            FirebaseHelper.validErrorFirebase(task.exception?.message ?: "")
                         }"
                     )
                     binding.progressbarLogin.isVisible = false
                     Toast.makeText(
                         requireContext(),
-                        FirebaseHelper.validError(task.exception?.message ?: ""),
+                        FirebaseHelper.validErrorFirebase(task.exception?.message ?: ""),
                         Toast.LENGTH_SHORT
                     ).show()
 
