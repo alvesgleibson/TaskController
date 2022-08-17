@@ -2,11 +2,11 @@
     <string name="app_name">TaskController</string>
 
     <!--        Generics-->
-        <string name="text_email">E-mail</string>
-        <string name="text_password">Senha</string>
-        <string name="text_hint">email@email.com</string>
-        <string name="text_create_account">Criar Conta</string>
-        <string name="error_unexpected">Ocorreu um erro, tente novamente mais tarde.</string>
+    <string name="text_email">E-mail</string>
+    <string name="text_password">Senha</string>
+    <string name="text_hint">email@email.com</string>
+    <string name="text_create_account">Criar Conta</string>
+    <string name="error_unexpected">Ocorreu um erro, tente novamente mais tarde.</string>
 
     <!--    Login Fragment-->
 
@@ -32,6 +32,15 @@
     <string name="acess_temporarily_blocked">Acesso bloqueado, tente novamente mais tarde</string>
     <string name="password_should_little_caracters">Senha deve conter no mínimo 6 Caracteres</string>
 
+    <!--Form Task Fragmkent-->
+    <string name="text_title_form_task">Nova Tarefa</string>
+    <string name="text_name_task_form_task">Tarefa</string>
+    <string name="text_status_form_task">Nova Tarefa</string>
+    <string name="hint_new_task">Digite uma nova tarefa</string>
+    <string name="new_task_todo">A Fazer</string>
+    <string name="new_task_doing">Fazendo</string>
+    <string name="new_task_done">Feito</string>
+    <string name="new_task_save_btn">Salvar</string>
 
 
 </resources>
