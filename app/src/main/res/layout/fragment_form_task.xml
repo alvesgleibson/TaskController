@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".ui.FormTaskFragment">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/appBarLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.appcompat.widget.Toolbar
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/color_default">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:text="@string/text_new_task"
+                android:textColor="@color/white" />
+
+        </androidx.appcompat.widget.Toolbar>
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:fillViewport="true"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/appBarLayout">
+
+        <LinearLayout
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/appBarLayout"
+            style="@style/linear_layout_designer">
+
+            <TextView
+                android:text="@string/text_new_task"
+                style="@style/style_text_view_information_fields"/>
+
+            <EditText
+                android:id="@+id/newTaskName"
+                style="@style/style_et_simple"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/hint_new_task"
+                android:minHeight="48dp" />
+
+            <TextView
+                android:text="@string/text_title_descripition_form_task"
+                style="@style/style_text_view_information_fields"/>
+
+            <EditText
+                android:id="@+id/newTaskDescription"
+                style="@style/style_et_simple"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/hint_description_new_task"
+                android:minHeight="48dp" />
+
+            <TextView
+                android:text="Status"
+                style="@style/style_text_view_information_fields"/>
+
+            <RadioGroup
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <RadioButton
+                    android:id="@+id/rg_todo"
+                    android:checked="true"
+                    android:text="@string/new_task_todo"
+                    style="@style/style_rb" />
+                <RadioButton
+                    android:id="@+id/rb_done"
+                    android:text="@string/new_task_doing"
+                    style="@style/style_rb"/>
+
+                <RadioButton
+                    android:id="@+id/rb_doing"
+                    style="@style/style_rb"
+                    android:text="@string/new_task_doing" />
+
+            </RadioGroup>
+            <Button
+                android:id="@+id/btnSaveTask"
+                android:text="@string/new_task_save_btn"
+                style="@style/style_btn"
+                app:backgroundTint="@null"/>
+
+            <ProgressBar
+                android:id="@+id/pbNewTask"
+                style="@style/style_progressbar"
+                tools:visibility="visible"/>
+
+        </LinearLayout>
+    </ScrollView>
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
