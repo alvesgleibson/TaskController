@@ -5,7 +5,10 @@
       <map>
         <entry key="..\:/workspace/ws-android-kotlin/app/src/main/res/drawable/bg_button.xml" value="0.266" />
         <entry key="..\:/workspace/ws-android-kotlin/app/src/main/res/drawable/bg_edit.xml" value="0.3575" />
+        <entry key="..\:/workspace/ws-android-kotlin/app/src/main/res/drawable/ic_back.xml" value="0.3675" />
         <entry key="..\:/workspace/ws-android-kotlin/app/src/main/res/drawable/ic_email.xml" value="0.163" />
+        <entry key="..\:/workspace/ws-android-kotlin/app/src/main/res/drawable/ic_forward.xml" value="0.3675" />
+        <entry key="..\:/workspace/ws-android-kotlin/app/src/main/res/drawable/ic_next.xml" value="0.3675" />
         <entry key="..\:/workspace/ws-android-kotlin/app/src/main/res/drawable/ic_password.xml" value="0.163" />
         <entry key="..\:/workspace/ws-android-kotlin/app/src/main/res/layout/activity_main.xml" value="0.36666666666666664" />
         <entry key="..\:/workspace/ws-android-kotlin/app/src/main/res/layout/bottom_sheet_confirm.xml" value="0.3388888888888889" />
@@ -18,6 +21,7 @@
         <entry key="..\:/workspace/ws-android-kotlin/app/src/main/res/layout/fragment_register.xml" value="0.36666666666666664" />
         <entry key="..\:/workspace/ws-android-kotlin/app/src/main/res/layout/fragment_splash.xml" value="0.36666666666666664" />
         <entry key="..\:/workspace/ws-android-kotlin/app/src/main/res/layout/fragment_todo.xml" value="0.35260416666666666" />
+        <entry key="..\:/workspace/ws-android-kotlin/app/src/main/res/layout/item_adapter_new_task.xml" value="0.33" />
       </map>
     </option>
   </component>
